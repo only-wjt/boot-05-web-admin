@@ -1,6 +1,7 @@
 package com.springboot.admin.controller;
 
 import com.springboot.admin.bean.User;
+import com.springboot.admin.exception.UserTooManyException;
 import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,6 +31,9 @@ public class TableController {
                 new User("王际涛", "123456"),
                 new User("测试", "123456"));
         model.addAttribute("users",users);
+        if(1 == 1) {
+            throw new UserTooManyException();
+        }
         return "/table/dynamic_table";
     }
     @GetMapping("/responsive_table")
