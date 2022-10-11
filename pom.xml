@@ -62,6 +62,7 @@
                         </exclude>
                     </excludes>
                 </configuration>
+                <version>2.1.7.RELEASE</version>
             </plugin>
         </plugins>
     </build>

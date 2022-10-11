@@ -26,7 +26,7 @@ public class MyregistConfig {
     public FilterRegistrationBean myFilter(){
         MyFilter myFilter = new MyFilter();
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(myFilter, myservlet());
-        filterRegistrationBean.setUrlPatterns(Arrays.asList("/my","./my02"));
+        filterRegistrationBean.setUrlPatterns(Arrays.asList("/my","/my02"));
         return filterRegistrationBean;
     }
     @Bean
