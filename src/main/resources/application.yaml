@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_accout
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      filters:
+        stat,wall
+      stat-view-servlet:
+        enabled: true
+        login-password: admin
+        login-username: admin
+        reset-enable: false
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+      aop-patterns: com.springboot.admin.*
+      filter:
+        stat:
+          slow-sql-millis: 1000
+          log-slow-sql: true
+        wall:
+          enabled: true
+
+
+#          config:
+#            update-allow: false
+
